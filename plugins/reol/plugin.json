@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "reol",
+  "version": "0.1.0",
+  "description": "Connect to ReOL and work with your apps, agents, assets, and connections using current operation guidance.",
+  "author": {
+    "name": "ReOL",
+    "email": "contact@reol.io",
+    "url": "https://reol.io"
+  },
+  "homepage": "https://reol.io",
+  "repository": "https://github.com/reol-io/reol-plugins",
+  "keywords": [
+    "reol",
+    "apps",
+    "agents",
+    "assets",
+    "connections"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/reol-setup/SKILL.md",
+      "interface": {
+        "displayName": "ReOL",
+        "shortDescription": "Your apps, agents, and assets",
+        "longDescription": "Connect your ReOL account, discover available workflows, and work with your apps, agents, assets, and connections. Available actions depend on your access and current ReOL documentation.",
+        "developerName": "ReOL",
+        "category": "Productivity",
+        "capabilities": [],
+        "websiteURL": "https://reol.io",
+        "defaultPrompt": [
+          "Help me connect ReOL and check what I can access.",
+          "Help me find the right ReOL app or asset for my task."
+        ]
+      }
+    }
+  }
+}

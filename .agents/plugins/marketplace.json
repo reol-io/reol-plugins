@@ -1,0 +1,20 @@
+{
+  "name": "reol-plugins",
+  "interface": {
+    "displayName": "ReOL Plugins"
+  },
+  "plugins": [
+    {
+      "name": "reol",
+      "source": {
+        "source": "local",
+        "path": "./plugins/reol"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
