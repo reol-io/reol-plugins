@@ -1,0 +1,75 @@
+{
+  "format": "reol.plugin-install/1",
+  "version": "0.1.1",
+  "pluginId": "reol@reol-plugins",
+  "source": "https://github.com/reol-io/reol-plugins",
+  "testedCli": "0.163.0",
+  "instruction": "Install ReOL and its bundled Skills from this source, then guide me through any required sign-in and consent and check read-only access.",
+  "install": [
+    [
+      "codex",
+      "plugin",
+      "marketplace",
+      "add",
+      "reol-io/reol-plugins"
+    ],
+    [
+      "codex",
+      "plugin",
+      "add",
+      "reol@reol-plugins"
+    ]
+  ],
+  "inspect": [
+    [
+      "codex",
+      "plugin",
+      "list",
+      "--json"
+    ]
+  ],
+  "update": [
+    [
+      "codex",
+      "plugin",
+      "marketplace",
+      "upgrade",
+      "reol-plugins"
+    ],
+    [
+      "codex",
+      "plugin",
+      "add",
+      "reol@reol-plugins"
+    ]
+  ],
+  "remove": [
+    [
+      "codex",
+      "plugin",
+      "remove",
+      "reol@reol-plugins"
+    ],
+    [
+      "codex",
+      "plugin",
+      "marketplace",
+      "remove",
+      "reol-plugins"
+    ]
+  ],
+  "authentication": {
+    "method": "host-managed-oauth",
+    "automatic": false,
+    "requiredUserAction": "Complete sign-in and consent in the host or ReOL page. Never paste credentials into chat.",
+    "completionEvidence": "A successful authorized read with the selected identity using current ReOL operation docs."
+  },
+  "failures": {
+    "clientMissingCommands": "Use a supported host Plugins interface or ask for help before changing the client.",
+    "sourceUnavailable": "Check the source address and connection. Keep the current installed version; do not switch to an unrelated source.",
+    "skillsMissing": "Check installation and enabled state, then open a fresh conversation. If the package is damaged, remove it and install again from the same source.",
+    "authorizationPending": "Stop authenticated actions and ask the user through their chosen contact route. Do not restart sign-in repeatedly.",
+    "accessDenied": "Check the selected identity and target app in current ReOL docs. Do not switch accounts or expand permissions automatically.",
+    "unknownWrite": "Read the operation-specific receipt/status before retrying. Keep the same intent and supported request key."
+  }
+}

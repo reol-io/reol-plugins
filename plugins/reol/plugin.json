@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "reol",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Connect to ReOL and work with your apps, agents, assets, and connections using current operation guidance.",
   "author": {
     "name": "ReOL",

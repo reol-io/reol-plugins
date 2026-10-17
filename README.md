@@ -1,6 +1,6 @@
 # ReOL plugin
 
-Use ReOL apps, agents, assets, and connections from a supported plugin host. Version **0.1.0** bundles **reol-setup** and **reol-workflows**, with a connection to the existing ReOL service.
+Use ReOL apps, agents, assets, and connections from a supported plugin host. Version **0.1.1** bundles **reol-setup** and **reol-workflows**, with a connection to the existing ReOL service.
 
 ## Install
 
@@ -40,6 +40,15 @@ codex plugin marketplace remove reol-plugins
 
 Run list to inspect installation, upgrade to refresh the Git marketplace, and add again to install the published version. Removing the plugin removes its local package; removing a marketplace removes its source registration. Use the host's connection settings to manage OAuth connections separately.
 
+## If setup stops
+
+- If the source cannot be reached, keep the current installation and check the address and connection. Do not choose an unrelated replacement source.
+- If Skills are missing, check that ReOL is installed and enabled, then open a fresh conversation. For a damaged package, remove it and install again from the same source.
+- If sign-in or consent is pending, stop authenticated actions until you can complete that step. Do not restart sign-in repeatedly.
+- If an app is unavailable, check the selected identity and the app's current access guidance. Avoid creating an identity or changing permissions just to test the connection.
+
+Agents can read `INSTALL.json`, this repository's structured installation guide. It lists the same commands and human authorization boundary; it is a ReOL guide format, not a host plugin standard. Installation checks and a successful authorized app read are separate results.
+
 ## Release files
 
 - `.agents/plugins/marketplace.json`: install-source catalog.
@@ -47,8 +56,9 @@ Run list to inspect installation, upgrade to refresh the Git marketplace, and ad
 - `plugins/reol/mcp.json`: existing ReOL MCP endpoint.
 - `plugins/reol/skills/reol-setup/SKILL.md`: setup and read-only access checks.
 - `plugins/reol/skills/reol-workflows/SKILL.md`: ordinary workflows using current search and docs.
-- `reol-0.1.0.zip`: plugin-only archive with one `reol/` root.
+- `reol-0.1.1.zip`: plugin-only archive with one `reol/` root.
 - `SHA256SUMS`: release file checksums.
+- `INSTALL.json`: structured install, update, remove and setup recovery guidance.
 
 This repository distributes release snapshots through a repository marketplace. A universal public Plugins Directory listing is separate and is not claimed. Pull requests, Issues, Discussions, Wiki, Projects and Actions are disabled on this release source. Public repositories can still be read and forked.
 
