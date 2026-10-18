@@ -1,6 +1,6 @@
 {
   "format": "reol.plugin-install/1",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "pluginId": "reol@reol-plugins",
   "source": "https://github.com/reol-io/reol-plugins",
   "testedCli": "0.163.0",

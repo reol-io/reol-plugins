@@ -1,6 +1,6 @@
 # ReOL plugin
 
-Use ReOL apps, agents, assets, and connections from a supported plugin host. Version **0.1.1** bundles **reol-setup** and **reol-workflows**, with a connection to the existing ReOL service.
+Use ReOL apps, agents, assets, and connections from a supported plugin host. Version **0.1.2** bundles **reol-setup** and **reol-workflows**, with a connection to the existing ReOL service.
 
 ## Install
 
@@ -56,7 +56,7 @@ Agents can read `INSTALL.json`, this repository's structured installation guide.
 - `plugins/reol/mcp.json`: existing ReOL MCP endpoint.
 - `plugins/reol/skills/reol-setup/SKILL.md`: setup and read-only access checks.
 - `plugins/reol/skills/reol-workflows/SKILL.md`: ordinary workflows using current search and docs.
-- `reol-0.1.1.zip`: plugin-only archive with one `reol/` root.
+- `reol-0.1.2.zip`: plugin-only archive with one `reol/` root.
 - `SHA256SUMS`: release file checksums.
 - `INSTALL.json`: structured install, update, remove and setup recovery guidance.
 
